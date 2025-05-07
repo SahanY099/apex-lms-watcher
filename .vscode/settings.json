@@ -1,0 +1,12 @@
+{
+    "cSpell.words": [
+        "customise",
+        "dateutil",
+        "dotenv",
+        "isoparse",
+        "playsound",
+        "uniquekey"
+    ],
+    "python.analysis.autoFormatStrings": true,
+    "ruff.lineLength": 80
+}

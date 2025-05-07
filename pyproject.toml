@@ -1,0 +1,15 @@
+[project]
+name = "apex-lms-watcher"
+version = "0.1.0"
+description = "Watched and notifies the user when the specified paper is published"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "auto-py-to-exe>=2.46.0",
+    "inquirerpy>=0.3.4",
+    "playsound3>=3.2.3",
+    "pydantic>=2.11.4",
+    "pydantic-settings[yaml]>=2.9.1",
+    "python-dateutil>=2.9.0.post0",
+    "requests>=2.32.3",
+]
