@@ -1,9 +1,10 @@
-import requests as rq
-import time
 import random
 import string
+import time
 
-from data_types import Config
+import requests as rq
+
+from .data_types import Config
 
 config = Config()
 

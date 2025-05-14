@@ -6,8 +6,8 @@ from datetime import datetime
 from InquirerPy import inquirer
 from playsound3 import playsound
 
-from data_types import Config, Paper
-from material_handling import download_materials
+from .data_types import Config, Paper
+from .material_handling import download_materials
 
 config = Config()
 OPEN_BROWSER = False  # Set to True to open browser when found

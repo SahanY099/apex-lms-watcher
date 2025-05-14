@@ -1,8 +1,8 @@
+import json
 from typing import NoReturn
 
-import json
-from auth import auth_request
-from data_types import Paper, Material
+from .auth import auth_request
+from .data_types import Material, Paper
 
 API_URL = "https://apexonline.lk/api/v1/topics/get-lms-topics"
 CLASS_ID = 2328

@@ -1,11 +1,10 @@
-import os
 from typing import List
 
 import requests
 from InquirerPy import inquirer
 from InquirerPy.base.control import Choice
 
-from data_types import Config, Material
+from .data_types import Config, Material
 
 config = Config()
 

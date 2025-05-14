@@ -1,9 +1,8 @@
 import json
 from typing import NoReturn
 
-from auth import auth_request
-from data_types import Paper
-
+from .auth import auth_request
+from .data_types import Paper
 
 API_URL = "https://apexonline.lk/api/v1/exams/get-merged-exams"
 FAKE_DATA_FILE_PATH = "bin/merged_exams.json"
