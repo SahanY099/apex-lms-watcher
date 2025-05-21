@@ -39,22 +39,26 @@ def check_for_essay(paper_number: int) -> Paper | NoReturn:
     """
     try:
         exams = fetch_essay_data()
+        mcq_str = str(paper_number)  # Convert to string for comparison
         paper = None
 
         for exam in exams:
             exam_data = exam.get("exam_id", {})
             exam_name = exam_data.get("exam_name", "").lower()
 
-            if paper_number in exam_name:
+            # if paper_number in exam_name:
+            if "pet" in exam_name and (
+                mcq_str in exam_name or f"{mcq_str} mcq" in exam_name
+            ):
                 paper = exam_data
-                break
+                paper = exam_data
 
-        return Paper(
-            name=paper.get("exam_name"),
-            type=Paper.PaperType.ESSAY,
-            unlocks_at=paper.get("exam_unlocks_at"),
-            expires_at=paper.get("exam_expires_at"),
-        )
+                return Paper(
+                    name=paper.get("exam_name"),
+                    type=Paper.PaperType.ESSAY,
+                    unlocks_at=paper.get("exam_unlocks_at"),
+                    expires_at=paper.get("exam_expires_at"),
+                )
 
     except Exception as e:
         print(str(e))
